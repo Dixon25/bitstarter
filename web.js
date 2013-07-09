@@ -14,6 +14,7 @@ app.get('/', function(request, response) {
 //    if (err) throw err;
 //    response.send(data.toString('utf-8'));
   //});
+console.log('Hello');
 response.send('Hello world2!');
 });
 
