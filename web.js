@@ -13,8 +13,8 @@ app.get('/', function(request, response) {
   fs.readFileSync('./index.html','utf-8', function (err, data) {
     if (err) throw err;
     //response.send(data.toString('utf-8'));
-});
-console.log(data);
+    console.log(data);
+  });
 response.send('Hello world2!');
 });
 
