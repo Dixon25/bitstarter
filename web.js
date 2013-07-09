@@ -10,10 +10,10 @@ app.get('/', function(request, response) {
 
 
 app.get('/', function(request, response) {
-  fs.readFileSync('./index.html', function (err, data) {
+//  fs.readFileSync('./index.html', function (err, data) {
 //    if (err) throw err;
 //    response.send(data.toString('utf-8'));
-  });
+  //});
 });
 
 
