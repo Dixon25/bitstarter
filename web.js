@@ -8,23 +8,19 @@ app.get('/', function(request, response) {
 });
 */
 
-/*
 app.get('/', function(request, response) {
     var data = fs.readFileSync('./index.html');
     response.send(data.toString());
 });
-*/
 
+/* //Por algun motivo no va...
 app.get('/', function(request, response) {
-var data1;
     fs.readFileSync('./index.html', function(err, data){
 	if (err) throw err;
-	data1 = data;
+	response.send(data.toString());
     });
-response.send(data1.toString());
-
 });
-
+*/
 
 
 
