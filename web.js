@@ -8,17 +8,20 @@ app.get('/', function(request, response) {
 });
 */
 
+/*
+app.get('/', function(request, response) {
+    var data = fs.readFileSync('./index.html');
+    response.send(data.toString());
+});
+*/
 
 app.get('/', function(request, response) {
-  var data = fs.readFileSync('./index.html');
+    fs.readFileSync('./index.html', function(err, data){
+	if (err) throw err;
+	response.send(data.toString());
 
-    //if (err) throw err;
-    //response.send(data.toString('utf-8'));
-    //console.log(data);
-    response.send(data.toString());
-  }
-//response.send('Hello world2!');
-);
+    });
+});
 
 
 
