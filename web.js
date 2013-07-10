@@ -16,11 +16,13 @@ app.get('/', function(request, response) {
 */
 
 app.get('/', function(request, response) {
+var data1;
     fs.readFileSync('./index.html', function(err, data){
-	//if (err) throw err;
-	response.send(data.toString());
-
+	if (err) throw err;
+	data1 = data;
     });
+response.send(data1.toString());
+
 });
 
 
